@@ -8,7 +8,6 @@
   <div id="resultcontainer"></div>
   <script src="./bundle.js"></script>
   <script>
-    console.log(ImageSearch)
     ImageSearch({
       previewImageId: "preview-img", // Optional
       buttonContainerId: "btn-container-id",
@@ -16,8 +15,7 @@
       mobileCameraOnly: true,
       endpoint: "http://127.127.0.1:8080/search/default",
       onresult: function(result) {
-        console.log('result arrived', arguments)
-        document.getElementById("resultcontainer").innerHTML = result
+        document.getElementById("resultcontainer").innerHTML = JSON.stringify(result,null,2)
       }
     })
   </script>

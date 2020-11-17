@@ -70,7 +70,9 @@ export function build(options) {
         //   'Access-Control-Allow-Origin': "*"
         // },
         timeout: 7000,
-        onload: options.onresult,
+        onload:  function(result){
+          options.onresult(JSON.parse(result))
+        },
         onerror: function() {
           console.log('onerror', arguments)
         },
