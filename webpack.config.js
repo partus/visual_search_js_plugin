@@ -1,9 +1,12 @@
+const path = require('path');
+
 module.exports = {
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
+    // path: __dirname,
     filename: 'bundle.js',
-    library: 'ImageSearch',
-    libraryTarget: 'var'
+    // library: 'yourLibName',
+    // libraryTarget: 'window'
   },
   module: {
     rules: [
@@ -12,7 +15,7 @@ module.exports = {
         use: [ 'style-loader', 'css-loader' ]
       },
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',

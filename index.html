@@ -1,0 +1,26 @@
+<html>
+<body>
+  <div id="btn-container-id" style="width: 128px;  margin-left: 30%; border:1px solid white;">
+  </div>
+  <div>
+    <img id="preview-img" style="height:200px;" />
+  </div>
+  <div id="resultcontainer"></div>
+  <script src="./bundle.js"></script>
+  <script>
+    console.log(ImageSearch)
+    ImageSearch({
+      previewImageId: "preview-img", // Optional
+      buttonContainerId: "btn-container-id",
+      buttonContent: '<img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Line-style-icons-camera.svg">',
+      mobileCameraOnly: true,
+      endpoint: "http://127.127.0.1:8080/search/default",
+      onresult: function(result) {
+        console.log('result arrived', arguments)
+        document.getElementById("resultcontainer").innerHTML = result
+      }
+    })
+  </script>
+</body>
+
+</html>
