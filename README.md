@@ -15,7 +15,7 @@
 <img id="preview-img" style="height:200px;" />
 ```
 4. Initialize the plugin
-```
+```javascript
 ImageSearch({
     buttonContainerId: "btn-container-id",
     // Id of the image where the preview will be rendered (Optional)
@@ -38,7 +38,7 @@ ImageSearch({
 The search result contains product ids of the products which are most similar to the one available in the image. These products should be inserted beforehand into the search engine using the search engine API.
 The search result also contains the distance measure between the product and the stuff depicted in the image. The search result is represented in JSON format as follows:
 
-```
+```javascript
 {
   // Statuse code
   "status": 200,
