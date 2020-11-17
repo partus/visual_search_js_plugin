@@ -16,8 +16,8 @@
       mobileCameraOnly: true,
       endpoint: "http://127.127.0.1:8080/search/default",
       onresult: function(result) {
-        console.log('result arrived', arguments)
-        document.getElementById("resultcontainer").innerHTML = result
+        console.log('result arrived', result)
+        document.getElementById("resultcontainer").innerHTML = JSON.stringify(result,null,2)
       }
     })
   </script>
